@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/parser.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'widgets/bottom_navigation_widget.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -46,6 +48,37 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          BottomNavigationWidget(
+            name: "Atividade",
+            image: SvgPicture.asset(
+              "assets/icons/Icon feather-target.svg",
+            ),
+          ),
+          Container(
+            color: Colors.white,
+            height: 45,
+            width: 1,
+          ),
+          BottomNavigationWidget(
+            name: "Repositorio",
+            image: SvgPicture.asset(
+              "assets/icons/Icon awesome-github.svg",
+            ),
+          ),
+          Container(
+            color: Colors.white,
+            height: 45,
+            width: 1,
+          ),
+          const BottomNavigationWidget(
+            name: "Sobre o dev",
+            image: Icon(Icons.person),
+          ),
+        ],
       ),
     );
   }
