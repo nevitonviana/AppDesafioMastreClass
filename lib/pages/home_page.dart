@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/parser.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'widgets/bottom_navigation_widget.dart';
@@ -49,36 +48,50 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: ListView(
         children: [
-          BottomNavigationWidget(
-            name: "Atividade",
-            image: SvgPicture.asset(
-              "assets/icons/Icon feather-target.svg",
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            height: 45,
-            width: 1,
-          ),
-          BottomNavigationWidget(
-            name: "Repositorio",
-            image: SvgPicture.asset(
-              "assets/icons/Icon awesome-github.svg",
-            ),
-          ),
-          Container(
-            color: Colors.white,
-            height: 45,
-            width: 1,
-          ),
-          const BottomNavigationWidget(
-            name: "Sobre o dev",
-            image: Icon(Icons.person),
-          ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: 60,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            BottomNavigationWidget(
+              name: "Atividade",
+              colorText: Colors.white,
+              image: SvgPicture.asset(
+                "assets/icons/Icon feather-target.svg",
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              height: 45,
+              width: 1,
+            ),
+            BottomNavigationWidget(
+              name: "Repositorio",
+              colorText: Colors.white,
+              image: SvgPicture.asset(
+                "assets/icons/Icon awesome-github.svg",
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              height: 45,
+              width: 1,
+            ),
+            const BottomNavigationWidget(
+              name: "Sobre o dev",
+              colorText: Colors.white,
+              image: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

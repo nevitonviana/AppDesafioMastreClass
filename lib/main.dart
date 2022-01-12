@@ -14,15 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          brightness: Brightness.dark,
-          // primaryColor: const Color(0xffD6DFE4),
-          // scaffoldBackgroundColor: const Color(0xffD6DFE4),
-          // appBarTheme: const AppBarTheme(
-          //   elevation: 0,
-          //   backgroundColor: Color(
-          //     0xffD6DFE4,
-          //   ),
-          // ),
+          // brightness: Brightness.dark,
+          primaryColor: const Color(0xff121517),
+          backgroundColor: const Color(0xff121517),
+          cardColor: const Color(0xff172026),
+          scaffoldBackgroundColor: Colors.black,
+          appBarTheme: const AppBarTheme(
+            elevation: 0,
+            backgroundColor: Colors.black,
+          ),
         ),
         home: const HomePage());
   }
