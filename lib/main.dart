@@ -1,4 +1,5 @@
 import 'package:app_desafios_masterclass/pages/dev/dev_page.dart';
+import 'package:app_desafios_masterclass/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
 import 'pages/home/home_page.dart';
@@ -29,6 +30,6 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.black,
           ),
         ),
-        home: const DevPage());
+        home: const SplashPage());
   }
 }
