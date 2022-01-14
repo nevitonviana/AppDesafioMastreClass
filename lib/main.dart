@@ -1,6 +1,7 @@
+import 'package:app_desafios_masterclass/pages/dev/dev_page.dart';
 import 'package:flutter/material.dart';
 
-import '/pages/home_page.dart';
+import 'pages/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,10 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           // brightness: Brightness.dark,
+          textTheme: const TextTheme(
+            bodyText1: TextStyle(color: Colors.white),
+            bodyText2: TextStyle(color: Colors.white),
+          ),
           primaryColor: const Color(0xff121517),
           backgroundColor: const Color(0xff121517),
           cardColor: const Color(0xff172026),
@@ -24,6 +29,6 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.black,
           ),
         ),
-        home: const HomePage());
+        home: const DevPage());
   }
 }
