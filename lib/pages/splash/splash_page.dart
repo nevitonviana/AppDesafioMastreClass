@@ -1,3 +1,4 @@
+import 'package:app_desafios_masterclass/route.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -8,11 +9,10 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-  
-
   @override
   void didChangeDependencies() {
-    // Future.delayed(const Duration(seconds: 2)).whenComplete(() => )
+    Future.delayed(const Duration(seconds: 2)).whenComplete(() =>
+        Navigator.of(context).pushNamedAndRemoveUntil(home, (route) => false));
     super.didChangeDependencies();
   }
 

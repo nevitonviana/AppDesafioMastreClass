@@ -1,6 +1,7 @@
 import 'package:app_desafios_masterclass/pages/base/base_page.dart';
 import 'package:app_desafios_masterclass/pages/dev/dev_page.dart';
 import 'package:app_desafios_masterclass/pages/home/home_page.dart';
+import 'package:app_desafios_masterclass/pages/repositories/repositories_page.dart';
 import 'package:app_desafios_masterclass/pages/splash/splash_page.dart';
 import 'package:app_desafios_masterclass/pages/view_activities/view_activities_page.dart';
 import 'package:app_desafios_masterclass/route.dart';
@@ -32,14 +33,14 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
         ),
       ),
-      home: const BasePage(),
-      // initialRoute: "/",
-      // routes: {
-      //   splash: (context) => const SplashPage(),
-      //   home: (context) => const HomePage(),
-      //   dev: (context) => const DevPage(),
-      //   viewActivities: (context) => const ViewActivitiesPage(),
-      // },
+      initialRoute: "/",
+      routes: {
+        splash: (context) => const SplashPage(),
+        home: (context) => const BasePage(),
+        dev: (context) => const DevPage(),
+        viewActivities: (context) => const ViewActivitiesPage(),
+        repositories: (context) => const RepositoriesPage(),
+      },
     );
   }
 }

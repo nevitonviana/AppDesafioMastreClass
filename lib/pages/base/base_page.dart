@@ -1,3 +1,4 @@
+import 'package:app_desafios_masterclass/pages/repositories/repositories_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -62,6 +63,7 @@ class _BasePageState extends State<BasePage> {
         controller: _pageController,
         children: const [
           HomePage(),
+          RepositoriesPage(),
           DevPage(),
         ],
       ),
@@ -74,7 +76,9 @@ class _BasePageState extends State<BasePage> {
             BottomNavigationWidget(
               onTap: () {
                 setState(() {
-                  _pageController.animateToPage( 0, duration: const Duration(milliseconds: 400), curve: Curves.easeOutQuint);
+                  _pageController.animateToPage(0,
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeOutQuint);
                 });
               },
               name: "Atividade",
@@ -91,7 +95,9 @@ class _BasePageState extends State<BasePage> {
             BottomNavigationWidget(
               onTap: () {
                 setState(() {
-                  _pageController.animateToPage( 1, duration: const Duration(milliseconds: 400), curve: Curves.easeOutQuint);
+                  _pageController.animateToPage(1,
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeOutQuint);
                 });
               },
               name: "Repositorio",
@@ -108,7 +114,9 @@ class _BasePageState extends State<BasePage> {
             BottomNavigationWidget(
               onTap: () {
                 setState(() {
-                  _pageController.animateToPage( 2, duration: const Duration(milliseconds: 400), curve: Curves.easeOutQuint);
+                  _pageController.animateToPage(2,
+                      duration: const Duration(milliseconds: 400),
+                      curve: Curves.easeOutQuint);
                 });
               },
               name: "Sobre o dev",
