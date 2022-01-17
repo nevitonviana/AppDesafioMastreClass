@@ -38,7 +38,9 @@ class MyApp extends StatelessWidget {
         splash: (context) => const SplashPage(),
         home: (context) => const BasePage(),
         dev: (context) => const DevPage(),
-        viewActivities: (context) => const ViewActivitiesPage(),
+        viewActivities: (context) => const ViewActivitiesPage(
+              listActivity: [],
+            ),
         repositories: (context) => const RepositoriesPage(),
       },
     );

@@ -4,7 +4,10 @@ import 'package:flutter_svg/svg.dart';
 import 'widgets/card_activities.dart';
 
 class ViewActivitiesPage extends StatelessWidget {
-  const ViewActivitiesPage({Key? key}) : super(key: key);
+  final List listActivity;
+
+  const ViewActivitiesPage({Key? key, required this.listActivity})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,13 +38,21 @@ class ViewActivitiesPage extends StatelessWidget {
           ),
         ],
       ),
-      body: ListView(
-        children: const [
-          CardActivities(),
-          CardActivities(),
-          CardActivities(),
-          CardActivities(),
-        ],
+      body: ListView.builder(
+        itemCount: listActivity.length,
+        itemBuilder: (context, index) {
+          return CardActivities(
+            counter: '1',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => listActivity[index],
+                ),
+              );
+            },
+          );
+        },
       ),
     );
   }

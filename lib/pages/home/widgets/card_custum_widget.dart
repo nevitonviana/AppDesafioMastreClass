@@ -6,18 +6,20 @@ class CardCustomWidget extends StatelessWidget {
   final String title;
   final String count;
   final String description;
+  final Function() onTap;
 
   const CardCustomWidget(
       {Key? key,
       required this.icon,
       required this.title,
       required this.count,
-      required this.description})
+      required this.description, required this.onTap,})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: onTap,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
