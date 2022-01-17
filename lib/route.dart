@@ -1,5 +1,5 @@
-const splash = "/";
+const splash = "/a";
 const home = "/home";
-const dev = "/dev";
+const dev = "/";
 const viewActivities = "/view_activities";
 const repositories = "/repositories";

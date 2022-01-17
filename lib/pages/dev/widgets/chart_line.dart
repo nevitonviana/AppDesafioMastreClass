@@ -24,10 +24,16 @@ class ChartLine extends StatelessWidget {
               Expanded(child: Text(title)),
               Expanded(
                 flex: 3,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
+                child: Stack(
                   children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      height: 15,
+                      width: constraints.maxWidth,
+                    ),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.blue,

@@ -47,11 +47,11 @@ class DevPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 15, bottom: 20),
                 child: Column(
                   children: const [
-                    ChartLine(rate: 0.1, title: "teste"),
-                    ChartLine(rate: 0.1, title: "teste"),
-                    ChartLine(rate: 0.1, title: "teste"),
-                    ChartLine(rate: 0.1, title: "teste"),
-                    ChartLine(rate: 0.1, title: "teste"),
+                    ChartLine(rate: 0.4, title: "Dart/Flutter"),
+                    ChartLine(rate: 0.1, title: "React"),
+                    ChartLine(rate: 0.1, title: "Javascript"),
+                    ChartLine(rate: 0.1, title: "HTML"),
+                    ChartLine(rate: 0.1, title: "CSS"),
                   ],
                 ),
               ),
