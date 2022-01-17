@@ -15,10 +15,10 @@ class LoginUnder extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              "assets/image/loginget1.png",
+              "assets/images/loginget1.png",
             ),
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                 top: 50,
                 bottom: 20,
               ),
@@ -32,7 +32,7 @@ class LoginUnder extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            Text(
+            const Text(
               "Manage your expenses\n Seamlessly",
               style: TextStyle(
                 color: Colors.grey,
@@ -49,12 +49,12 @@ class LoginUnder extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  color: Color(0xff5E5CE5),
+                  color: const Color(0xff5E5CE5),
                 ),
                 height: 40,
                 width: double.infinity,
                 alignment: Alignment.center,
-                child: Text(
+                child: const Text(
                   "Sing Up With Email ID",
                   style: TextStyle(
                     color: Colors.white,
@@ -79,7 +79,7 @@ class LoginUnder extends StatelessWidget {
                   Image.network(
                       "https://img.icons8.com/color/25/000000/google-logo.png"),
                   const SizedBox(width: 5),
-                  Text(
+                  const Text(
                     "Sing Up With Email ID",
                     style: TextStyle(
                       color: Colors.black,
@@ -96,13 +96,15 @@ class LoginUnder extends StatelessWidget {
                 bottom: 20,
               ),
               child: RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   style: TextStyle(fontWeight: FontWeight.w400),
                   text: 'Already have an account? ',
                   children: [
                     TextSpan(
                       text: "Sign IN",
-                      style: TextStyle(decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),

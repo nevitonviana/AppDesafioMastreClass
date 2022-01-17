@@ -21,16 +21,19 @@ class LoginTinder extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            Align(
-              child: Container(
-                margin: const EdgeInsets.only(top: 15),
-                child: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
-                  size: 25,
+            GestureDetector(
+              onTap: () => Navigator.of(context).pop(),
+              child: Align(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 15),
+                  child: const Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                    size: 25,
+                  ),
                 ),
+                alignment: Alignment.topLeft,
               ),
-              alignment: Alignment.topLeft,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,

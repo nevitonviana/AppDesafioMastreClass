@@ -15,20 +15,20 @@ class _Animated1State extends State<Animated1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 56),
+        preferredSize: const Size(double.infinity, 56),
         child: AnimatedContainer(
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           color: isExpanded ? Colors.green : Colors.blue,
           child: AppBar(
             backgroundColor: Colors.transparent,
-            title: Text('implicitas'),
+            title: const Text('implicitas'),
             centerTitle: true,
           ),
         ),
       ),
       body: AnimatedContainer(
         alignment: isExpanded ? Alignment.topCenter : Alignment.bottomRight,
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
         child: GestureDetector(
           onTap: () {
             setState(() {
@@ -38,8 +38,8 @@ class _Animated1State extends State<Animated1> {
           child: AnimatedContainer(
             height: isExpanded ? 50 : 60,
             width: isExpanded ? 240 : 60,
-            margin: EdgeInsets.only(bottom: 25, right: 15, top: 20),
-            duration: Duration(seconds: 2),
+            margin: const EdgeInsets.only(bottom: 25, right: 15, top: 20),
+            duration: const Duration(seconds: 2),
             decoration: BoxDecoration(
               color: isExpanded ? Colors.grey : Colors.purple,
               borderRadius: BorderRadius.circular(isExpanded ? 10 : 50),
@@ -47,7 +47,7 @@ class _Animated1State extends State<Animated1> {
             child: Container(
               margin: EdgeInsets.only(right: isExpanded ? 15 : 0),
               alignment: isExpanded ? Alignment.centerRight : Alignment.center,
-              child: Icon(Icons.search),
+              child: const Icon(Icons.search),
             ),
           ),
         ),

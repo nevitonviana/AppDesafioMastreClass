@@ -20,7 +20,7 @@ class _Animated2State extends State<Animated2>
   void initState() {
     _animationController = AnimationController(
         vsync: this,
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
         upperBound: 100,
         lowerBound: 0);
     _animation = Tween<double>(end: 2, begin: 0).animate(CurvedAnimation(
@@ -33,53 +33,54 @@ class _Animated2State extends State<Animated2>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Animações Controladas"),
+        title: const Text("Animações Controladas"),
       ),
-      body: Container(
-        child: ListView.builder(
-          itemCount: listIten.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                ListTile(
-                  onTap: () {
-                    setState(() {
-                      listIten[index]
-                          ? _animationController.reverse()
-                          : _animationController.forward();
-                    });
-                    listIten[index] = !listIten[index];
-                  },
-                  title: AnimatedContainer(
-                    duration: Duration(seconds: 2),
-                    child: Text(
-                      "What is Lorem Ipsum?",
-                      style: TextStyle(
-                          color: listIten[index] ? Colors.blue : Colors.black),
-                    ),
-                  ),
-                  trailing: Icon(
+      body: ListView.builder(
+        itemCount: listIten.length,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              ListTile(
+                onTap: () {
+                  setState(() {
                     listIten[index]
-                        ? Icons.keyboard_arrow_up
-                        : Icons.keyboard_arrow_down,
-                    size: 30,
+                        ? _animationController.reverse()
+                        : _animationController.forward();
+                  });
+                  listIten[index] = !listIten[index];
+                },
+                title: AnimatedContainer(
+                  duration: const Duration(seconds: 2),
+                  child: Text(
+                    "What is Lorem Ipsum?",
+                    style: TextStyle(
+                        color: listIten[index] ? Colors.blue : Colors.black),
                   ),
                 ),
-                AnimatedBuilder(
-                  animation: _animation,
-                  builder: (context, child) {
-                    return Container(
-                      height: _animationController.value,
-                      child: Text(
-                          " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. er including versions of Lorem Ipsum."),
-                    );
-                  },
-                )
-              ],
-            );
-          },
-        ),
+                trailing: Icon(
+                  listIten[index]
+                      ? Icons.keyboard_arrow_up
+                      : Icons.keyboard_arrow_down,
+                  size: 30,
+                ),
+              ),
+              AnimatedBuilder(
+                animation: _animation,
+                builder: (context, child) {
+                  return SizedBox(
+                    height: _animationController.value,
+                    child: const Text(
+                      " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. er including versions of Lorem Ipsum.",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  );
+                },
+              )
+            ],
+          );
+        },
       ),
     );
   }
