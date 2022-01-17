@@ -1,8 +1,15 @@
-import 'package:app_desafios_masterclass/activity/mockup%20reading/login_tinder.dart';
-import 'package:app_desafios_masterclass/activity/mockup%20reading/login_under.dart';
+import 'animations/animated1.dart';
+import 'mockup%20reading/login_tinder.dart';
+import 'mockup%20reading/login_under.dart';
+import 'animations/animated2.dart';
 
 listAnimation() {
-  return [];
+  return [
+    const Animated1(),
+    const Animated2(),
+    const Animated1(),
+    const Animated2(),
+  ];
 }
 
 listPlayground() {
@@ -10,8 +17,5 @@ listPlayground() {
 }
 
 listMockup() {
-  return [
-    const LoginTinder(),
-    const LoginUnder()
-  ];
+  return [const LoginTinder(), const LoginUnder()];
 }
