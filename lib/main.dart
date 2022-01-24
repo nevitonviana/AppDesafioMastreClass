@@ -1,11 +1,13 @@
-import 'package:app_desafios_masterclass/pages/base/base_page.dart';
-import 'package:app_desafios_masterclass/pages/dev/dev_page.dart';
-import 'package:app_desafios_masterclass/pages/home/home_page.dart';
-import 'package:app_desafios_masterclass/pages/repositories/repositories_page.dart';
-import 'package:app_desafios_masterclass/pages/splash/splash_page.dart';
-import 'package:app_desafios_masterclass/pages/view_activities/view_activities_page.dart';
-import 'package:app_desafios_masterclass/route.dart';
+import 'package:app_desafios_masterclass/pages/post/post_page.dart';
 import 'package:flutter/material.dart';
+
+import 'pages/base/base_page.dart';
+import 'pages/dev/dev_page.dart';
+import 'pages/repositories/repositories_page.dart';
+import 'pages/splash/splash_page.dart';
+import 'pages/view_activities/view_activities_page.dart';
+
+import 'route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +44,7 @@ class MyApp extends StatelessWidget {
               listActivity: [],
             ),
         repositories: (context) => const RepositoriesPage(),
+        post: (context) => const PostPage(),
       },
     );
   }

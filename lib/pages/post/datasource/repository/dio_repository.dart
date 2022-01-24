@@ -3,14 +3,14 @@ import 'package:dio/dio.dart';
 
 import 'http_server.dart';
 
-class GetPost implements IHttpServer{
+class DioRepository implements IHttpServer{
   final Dio _dio;
 
-  GetPost(this._dio);
+  DioRepository(this._dio);
 
   @override
-  Future get(String url) {
-    final result = _dio.get(url);
+  Future<dynamic> get(String url)async {
+    final result = await _dio.get(url);
     return result;
   }
 }
