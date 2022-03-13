@@ -1,16 +1,29 @@
+import 'package:app_desafios_masterclass/pages/post/datasource/repository/dio_repository.dart';
+import 'package:app_desafios_masterclass/pages/post/datasource/repository/http_server.dart';
 import 'package:app_desafios_masterclass/pages/post/post_page.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 import 'pages/base/base_page.dart';
 import 'pages/dev/dev_page.dart';
+import 'pages/post/datasource/posts.dart';
 import 'pages/repositories/repositories_page.dart';
 import 'pages/splash/splash_page.dart';
 import 'pages/view_activities/view_activities_page.dart';
 
 import 'route.dart';
 
+final get = GetIt.instance;
 void main() {
+  setupLocators();
   runApp(const MyApp());
+}
+
+void setupLocators() {
+  get.registerLazySingleton(() => Dio());
+  get.registerLazySingleton(() => DioRepository(get.get()));
+  get.registerLazySingleton(() => Posts(get.get()));
 }
 
 class MyApp extends StatelessWidget {
